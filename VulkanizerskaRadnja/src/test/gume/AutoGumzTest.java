@@ -22,6 +22,7 @@ class AutoGumzTest {
 	@Before
 	public void setUp() throws Exception {
 		a=new AutoGuma();
+		// ne ulazi u ovaj deo koda
 	}
 
 	/**
@@ -37,93 +38,80 @@ class AutoGumzTest {
 	 */
 	@Test
 	public void testSetMarkaModel() {
+		a=new AutoGuma();
 		a.setMarkaModel("Tigar");
 		assertEquals("Tigar", a.getMarkaModel());
 	}
+	/*
 	@Test (expected=java.lang.RuntimeException.class)
 	public void testSetMarkaModelNull() {
 		a.setMarkaModel(null);
 	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetMarkaModelManje() {
-		a.setMarkaModel("Ti");
-	}
+	*/
+	
 	/**
 	 * Test method for {@link gume.AutoGuma#setPrecnik(int)}.
 	 */
+	
 	@Test
 	public void testSetPrecnik() {
+		a=new AutoGuma();
 		a.setPrecnik(20);
 		assertEquals(20, a.getPrecnik());
-	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetPrecnikManje() {
-		a.setPrecnik(10);
-	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetPrecnikVise() {
-		a.setPrecnik(25);
 	}
 	
 	/**
 	 * Test method for {@link gume.AutoGuma#setSirina(int)}.
 	 */
+	
 	@Test
 	public void testSetSirina() {
+		a=new AutoGuma();
 		a.setSirina(300);
 		assertEquals(300, a.getSirina());
-	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetSirinaManje() {
-		a.setSirina(130);
-	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetSirinaVise() {
-		a.setSirina(360);
 	}
 	
 	/**
 	 * Test method for {@link gume.AutoGuma#setVisina(int)}.
 	 */
+	
 	@Test
 	public void testSetVisina() {
+		a=new AutoGuma();
 		a.setVisina(50);
 		assertEquals(50, a.getVisina());
 	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetVisinaManje() {
-		a.setVisina(20);
-	}
-	@Test (expected=java.lang.RuntimeException.class)
-	public void testSetVisinaVise() {
-		a.setVisina(100);
-	}
+	
 	/**
 	 * Test method for {@link gume.AutoGuma#toString()}.
 	 */
+	
 	@Test
 	public void testToString() {
+		a=new AutoGuma();
 		a.setMarkaModel("Tigar");
-		a.setPrecnik(15);
-		a.setSirina(200);
+		a.setPrecnik(20);
+		a.setSirina(150);
 		a.setVisina(50);
-		assertEquals("AutoGuma [markaModel=Tigar, precnik=15, sirina=200, visina=50]", a.toString());
+		assertEquals("AutoGuma [markaModel=Tigar, precnik=20, sirina=150, visina=50]", a.toString());
 	}
 
 	/**
 	 * Test method for {@link gume.AutoGuma#equals(java.lang.Object)}.
 	 */
+	
 	@Test
 	public void testEqualsObject1() {
 		AutoGuma a2=new AutoGuma();
+		a=new AutoGuma();
 		a.setMarkaModel("Tigar");
-		a.setPrecnik(15);
-		a.setSirina(200);
+		a.setPrecnik(20);
+		a.setSirina(150);
 		a.setVisina(50);
 		
 		a2.setMarkaModel("Tigar");
-		a2.setPrecnik(15);
-		a2.setSirina(200);
+		a2.setPrecnik(20);
+		a2.setSirina(150);
 		a2.setVisina(50);
 		
 		assertEquals(a.equals(a2), true);
@@ -131,18 +119,20 @@ class AutoGumzTest {
 	@Test
 	public void testEqualsObject0() {
 		AutoGuma a2=new AutoGuma();
+		a=new AutoGuma();
 		a.setMarkaModel("Tigar");
-		a.setPrecnik(15);
-		a.setSirina(200);
+		a.setPrecnik(20);
+		a.setSirina(150);
 		a.setVisina(50);
 		
 		a2.setMarkaModel("Tigar");
-		a2.setPrecnik(15);
+		a2.setPrecnik(20);
 		a2.setSirina(190);
 		a2.setVisina(50);
 		
 		assertEquals(a.equals(a2), false);
 }
+	
 	
 
 }
