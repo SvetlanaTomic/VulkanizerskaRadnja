@@ -5,7 +5,7 @@ import gume.AutoGuma;
 /**
  * Klasa koja predstavlja vulkanizersku radnju.
  * @author SvetlanaTomic
- * @version 1.0
+ * @version 0.01
  *
  */
 public class VulkanizerskaRadnja {
