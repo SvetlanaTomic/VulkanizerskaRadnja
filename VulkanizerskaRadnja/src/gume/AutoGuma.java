@@ -6,7 +6,7 @@ package gume;
  * set metode, kao i redeinisane equals i toString metode
  * 
  * @author SvetlanaTomic
- * @version 1.0
+ * @version 0.0.1
  *
  */
 public class AutoGuma {
