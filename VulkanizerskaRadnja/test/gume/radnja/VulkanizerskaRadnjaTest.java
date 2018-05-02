@@ -1,6 +1,8 @@
-package gume.test.gume.radnja;
+package gume.radnja;
 
 import static org.junit.Assert.*;
+
+import java.util.LinkedList;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -86,7 +88,7 @@ public class VulkanizerskaRadnjaTest {
 		a.setVisina(50);
 		v.dodajGumu(a);	
 		
-		assertEquals(1, v.pronadjiGumu("Renault Capture").size());
+		assertEquals(a, v.pronadjiGumu("Renault Capture").get(0));
 	}
 
 	@Test
@@ -109,8 +111,9 @@ public class VulkanizerskaRadnjaTest {
 		a3.setVisina(61);
 		v.dodajGumu(a3);
 	
-		
-		assertEquals(3, v.pronadjiGumu("Renault Capture").size());
+		assertEquals(a3, v.pronadjiGumu("Renault Capture").get(0));
+		assertEquals(a2, v.pronadjiGumu("Renault Capture").get(1));
+		assertEquals(a, v.pronadjiGumu("Renault Capture").get(2));
 	}
 
 	
